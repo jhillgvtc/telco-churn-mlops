@@ -2,6 +2,28 @@
 
 A portfolio-ready MLOps pipeline for broadband churn prediction. The project uses synthetic telco customer data so it can be published safely while still demonstrating a realistic machine learning workflow: data generation, validation, training, experiment tracking, batch scoring, API serving, drift monitoring, and an executive dashboard.
 
+## Demo
+
+![Dashboard overview](docs/dashboard-overview.png)
+
+![Top scored customers](docs/top-scored-customers.png)
+
+![Pipeline architecture](docs/pipeline-architecture.png)
+
+The project runs locally with a FastAPI service and Streamlit dashboard:
+
+```powershell
+.\scripts\run.ps1 all
+.\scripts\run.ps1 api
+.\scripts\run.ps1 dashboard
+```
+
+Additional implementation screenshots:
+
+![API health check](docs/api-health.png)
+
+![Monitoring report](docs/monitoring-report.png)
+
 ## What It Demonstrates
 
 - Synthetic broadband customer dataset with churn drivers such as tenure, ARPU, bundle depth, autopay, competition, MDU status, and address turnover.
