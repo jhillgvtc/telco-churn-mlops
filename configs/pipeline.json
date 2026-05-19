@@ -1,0 +1,26 @@
+{
+  "seed": 42,
+  "n_customers": 12000,
+  "paths": {
+    "raw": "data/raw/customers.csv",
+    "processed": "data/processed/customers.csv",
+    "scored": "artifacts/scored_customers.csv",
+    "model": "artifacts/model.joblib",
+    "metrics": "artifacts/metrics.json",
+    "monitoring": "artifacts/monitoring_report.html",
+    "mlflow_fallback": "artifacts/mlflow_fallback"
+  },
+  "model": {
+    "test_size": 0.2,
+    "n_estimators": 300,
+    "learning_rate": 0.05,
+    "max_depth": 8,
+    "num_leaves": 127,
+    "random_state": 42
+  },
+  "monitoring": {
+    "psi_alert_threshold": 0.25,
+    "top_decile_lift_alert_threshold": 3.0
+  }
+}
+

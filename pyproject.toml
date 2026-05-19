@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telco-churn-mlops"
+version = "0.1.0"
+description = "Portfolio-ready MLOps pipeline for synthetic broadband churn prediction."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi",
+  "joblib",
+  "lightgbm",
+  "numpy",
+  "pandas",
+  "pydantic",
+  "scikit-learn",
+  "streamlit",
+  "uvicorn",
+]
+
+[project.optional-dependencies]
+mlops = ["mlflow", "pandera", "evidently"]
+dev = ["pytest"]
+
+[project.scripts]
+telco-churn = "telco_churn.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+

@@ -1,0 +1,11 @@
+fastapi
+joblib
+lightgbm
+numpy
+pandas
+pydantic
+scikit-learn
+streamlit
+uvicorn
+pytest
+
